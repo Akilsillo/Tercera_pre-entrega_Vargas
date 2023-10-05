@@ -1,0 +1,20 @@
+{% extends "FirstApp/father.html" %}
+{% load static %}
+
+{% block title %}
+<br>
+<h2>Agregar Juegos</h2>
+<br>
+{% endblock title %}
+
+{% block section1 %}
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <table>
+            {{ miForm.as_table}}
+        </table>
+
+        <input type="submit" value="Guardar Juego">
+    </form>
+{% endblock section1 %}

@@ -1,0 +1,20 @@
+{% extends "FirstApp/father.html" %}
+{% load static %}
+
+{% block title %}
+<br>
+<h2>Resultado</h2>
+<br>
+{% endblock title %}
+
+{% block section1 %}
+
+    <ul>
+        {% for game in games %}
+        <li>Nombre: {{ game.name }} </li>
+        <li>Lanzamiento: {{ game.release_date }} </li>
+        <li>Nota: {{ game.rating }} </li>
+        {% endfor %}
+    </ul>
+
+{% endblock section1 %}
